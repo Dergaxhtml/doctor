@@ -33,9 +33,9 @@ public class UserServiceImpl implements UserService{
     userRepository.save(user);
   }
 
-  public List<UserDto> findAll(){
+  public List<User> findAll(){
 return userRepository.findAll().stream()
-  .map(user -> modelMapper.map(user, UserDto.class))
+  .map(user -> modelMapper.map(user, User.class))
   .collect(Collectors.toList());
   }
 }

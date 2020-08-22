@@ -1,6 +1,7 @@
 package com.pdt.doctor.controller;
 
 import com.pdt.doctor.dto.UserDto;
+import com.pdt.doctor.entity.User;
 import com.pdt.doctor.service.UserService;
 import com.pdt.doctor.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class UserController {
   private UserService userService;
 
   @GetMapping("all")
-  public List<UserDto> findAll() {
+  public List<User> findAll() {
     return userService.findAll();
   }
 }

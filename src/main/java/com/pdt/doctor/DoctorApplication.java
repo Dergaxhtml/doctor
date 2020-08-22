@@ -29,34 +29,6 @@ public class DoctorApplication {
 	}
 
 
-//
-//	@Component
-//	@Order(0)
-//	class MyApplicationListener implements ApplicationListener<ApplicationReadyEvent> {
-//
-//
-//		@Autowired
-//		private UserServiceImpl userService;
-//
-//		@Autowired
-//		@Qualifier("userPasswordValidator")
-//		private Validator validator;
-//
-//		@InitBinder
-//		private void initBinder(WebDataBinder binder) {
-//			binder.setValidator(validator);
-//
-//		@Override
-//		public void onApplicationEvent(ApplicationReadyEvent event) {
-//
-//				userService.register(new UserDto("Alonso", "PWN","PWN"));
-//				userService.register(new UserDto("Kubica", "orlen","orlen"));
-//				userService.register(new UserDto("Potts", "opera","opera"));
-//
-//		}
-//
-//
-//	}
 
 }
 
