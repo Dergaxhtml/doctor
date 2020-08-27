@@ -1,6 +1,7 @@
 package com.pdt.doctor;
 
 import com.pdt.doctor.dto.UserDto;
+import com.pdt.doctor.service.PictureServiceImpl;
 import com.pdt.doctor.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -18,6 +19,9 @@ public class DataLoader implements ApplicationRunner {
   private UserServiceImpl userService;
 
   @Autowired
+  private PictureServiceImpl pictureService;
+
+  @Autowired
   @Qualifier("userPasswordValidator")
   private Validator validator;
 
@@ -31,7 +35,7 @@ public class DataLoader implements ApplicationRunner {
     userService.register(new UserDto("Alonso", "PWN","PWN"));
     userService.register(new UserDto("Kubica", "orlen","orlen"));
     userService.register(new UserDto("Potts", "opera","opera"));
-
+pictureService.saveImage("doctor.jpg");
 
   }
 
